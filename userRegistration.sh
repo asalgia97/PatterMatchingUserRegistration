@@ -10,10 +10,10 @@ Pattern=^[A-Z][a-zA-Z]{2}
 Pattern2=^[A-Z][a-zA-Z]{2}
 emailPattern=^[a-z]+([.][a-z]+)?@[a-z]+.[a-z]+([.][a-z]+)?$
 mobilePattern=^[0-9][1-9]" "[0-9]{10}
-passwordPatternContainUpperCase=[a-zA-Z]*[A-Z]+[a-zA-Z]*
-passwordLengthGreaterThan8Char=[a-zA-Z0-9\$|#|\!|\@]{8}[a-zA-Z0-9]*
-passwordPatternContainingNum=[a-zA-Z0-9]*[0-9]+[a-zA-Z0-9]*
-passwordPatternContainingOnlyOneSpecialChar="[a-zA-Z0-9]*[\$|#|\!|\@]+[a-zA-Z0-9]*"
+passwordPatternContainUpperCase='^[a-zA-Z0-9\$|#|\!|\@]*[A-Z]+[a-zA-Z0-9]*'
+passwordLengthGreaterThan8Char='^[a-zA-Z0-9\$|#|\!|\@]{8}[a-zA-Z0-9]*'
+passwordPatternContainingNum='^[a-zA-Z0-9\$|#|\!|\@]*[0-9]+[a-zA-Z0-9]*'
+passwordPatternContainingOnlyOneSpecialChar="^[a-zA-Z0-9]*[\$|#|\!|\@]{1}[a-zA-Z0-9]*$"
 if [[ $checkFirstName =~ $Pattern ]]
 then
 	echo "$checkFirstName is valid"
