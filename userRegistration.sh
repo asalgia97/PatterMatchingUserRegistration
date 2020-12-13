@@ -50,5 +50,5 @@ then
 	else
 		echo "$pass Invalid password"
 	fi
-	else "Password Less than 8 characters"
+	else echo "Password Less than 8 characters"
 fi
