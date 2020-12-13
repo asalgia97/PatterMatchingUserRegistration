@@ -8,8 +8,9 @@ read -p "Enter Mobile Number In '(country code)xx (number)xxxxxxxxxx' Format : "
 read -p "Enter User Password : " pass
 Pattern=^[A-Z][a-zA-Z]{2}
 Pattern2=^[A-Z][a-zA-Z]{2}
-emailPattern=^[a-z]+([.][a-z]+)?@[a-z]+.[a-z]+([.][a-z]+)?$
+emailPattern='^[a-c]{3}([.|-|+]*[0|1]+){0,3}@[a-z0-9]+.[a-z]+([.][a-z]+)?$'
 mobilePattern=^[0-9][1-9]" "[0-9]{10}
+
 
 passwordPatternContainUpperCase='^[a-zA-Z0-9\$|#|\!|\@]*[A-Z]+[a-zA-Z0-9]*'
 passwordLengthGreaterThan8Char='^[a-zA-Z0-9\$|#|\!|\@]{8}[a-zA-Z0-9]*'
