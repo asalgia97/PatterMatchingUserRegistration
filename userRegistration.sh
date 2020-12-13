@@ -5,10 +5,12 @@ read -p "Enter First Name" checkFirstName
 read -p "Enter Last Name" checkLastName
 read -p "Enter Email" Email
 read -p "Enter Mobile Number In '(country code)xx (number)xxxxxxxxxx' Format : " mobileNumber
+read -p "Enter User Password : " pass
 Pattern=^[A-Z][a-zA-Z]{2}
 Pattern2=^[A-Z][a-zA-Z]{2}
 emailPattern=^[a-z]+([.][a-z]+)?@[a-z]+.[a-z]+([.][a-z]+)?$
 mobilePattern=^[0-9][1-9]"\s"[0-9]{10}
+passPattern=[\$.#@a-zA-Z0-9]{8}[a-zA-Z0-9]*
 if [[ $checkFirstName =~ $Pattern ]]
 then
 	echo "$checkFirstName is valid"
@@ -32,4 +34,10 @@ then
 	echo "+$mobileNumber is valid"
 else
 	echo "Invalid Mobile Number"
+fi
+if [[ $pass =~ $passPattern ]]
+then
+	echo "$password : ****"
+else
+	echo "Invalid password"
 fi
