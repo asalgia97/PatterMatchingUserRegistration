@@ -8,7 +8,7 @@ read -p "Enter Mobile Number In '(country code)xx (number)xxxxxxxxxx' Format : "
 Pattern=^[A-Z][a-zA-Z]{2}
 Pattern2=^[A-Z][a-zA-Z]{2}
 emailPattern=^[a-z]+([.][a-z]+)?@[a-z]+.[a-z]+([.][a-z]+)?$
-mobilePattern=^[0-9][1-9]"\s"[0-9]{10}
+mobilePattern=^[0-9][1-9]" "[0-9]{10}
 if [[ $checkFirstName =~ $Pattern ]]
 then
 	echo "$checkFirstName is valid"
