@@ -4,9 +4,11 @@ echo "Welcome to Pattern Matching User Registration"
 read -p "Enter First Name" checkFirstName
 read -p "Enter Last Name" checkLastName
 read -p "Enter Email" Email
+read -p "Enter Mobile Number In '(country code)xx (number)xxxxxxxxxx' Format : " mobileNumber
 Pattern=^[A-Z][a-zA-Z]{2}
 Pattern2=^[A-Z][a-zA-Z]{2}
 emailPattern=^[a-z]+([.][a-z]+)?@[a-z]+.[a-z]+([.][a-z]+)?$
+mobilePattern=^[0-9][1-9]"\s"[0-9]{10}
 if [[ $checkFirstName =~ $Pattern ]]
 then
 	echo "$checkFirstName is valid"
@@ -24,4 +26,10 @@ then
 	echo "$email is valid"
 else
 	echo "Invalid Email"
+fi
+if [[ $mobileNumber =~ $mobilePattern ]]
+then
+	echo "+$mobileNumber is valid"
+else
+	echo "Invalid Mobile Number"
 fi
