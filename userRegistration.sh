@@ -23,7 +23,7 @@ else
 fi
 if [[ $Email =~ $emailPattern ]]
 then
-	echo "$email is valid"
+	echo "$Email is valid"
 else
 	echo "Invalid Email"
 fi
